@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooter 2D de Zombies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pantalla de carga -->
+    <div id="loading-screen">
+        <h2>Cargando...</h2>
+        <p>Por favor, espera un momento.</p>
+    </div>
+    
+    <header class="bg-dark text-white text-center p-3">
+        <h1>Shooter 2D de Zombies</h1>
+        <p>¡Elimina a los zombies y avanza a la salida para avanzar de nivel!</p>
+    </header>
+    <main class="container" style="cursor: url('assets/png-transparent-telescopic-sight-reticle-weapon-rifle-shotgun-weapon-angle-symmetry-reticle-removebg-preview.png'), auto;">
+        <div id="game-container">
+            <canvas id="game-canvas"></canvas>
+        </div>
+        <p id="score" style="font-size: 24px;">Puntuación: 0</p>
+        <p id="level" style="font-size: 24px;">Nivel: 1</p>
+        <div id="instructions" style="font-size: 20px; margin-top: 20px;">
+            <h3>Instrucciones</h3>
+            <p>Mueve al jugador con 'A' (izquierda) y 'D' (derecha).</p>
+            <p>Haz clic en los zombies para eliminarlos.</p>
+            <p>Alcanza la salida para avanzar de nivel.</p>
+        </div>
+    </main>
+    <footer class="bg-dark text-white text-center p-2">
+        by Meneses Duran Luis Enrique (EnriqueMCGM)
+    </footer>
+    <script src="game.js"></script>
+    <script>
+        // Oculta la pantalla de carga y comienza el juego después de 7 segundos
+        setTimeout(() => {
+            document.getElementById('loading-screen').style.display = 'none';
+            updateGame(0); // Inicia el juego
+        }, 7000);
+    </script>
+</body>
+</html>

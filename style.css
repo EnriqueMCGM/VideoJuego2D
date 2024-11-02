@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-image: url('assets/ruinas-ciudad-edificios-abandonados-destruidos-dibujos-animados-zona-guerra_1284-62449.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 600px;
+    cursor: url('Descargas/png-transparent-telescopic-sight-reticle-weapon-rifle-shotgun-weapon-angle-symmetry-reticle-removebg-preview.png'), auto; /* Puntero personalizado */
+}
+
+canvas {
+    border: 2px solid #000;
+    background-color: transparent;
+    cursor: crosshair;
+}
+
+#instructions {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 16px;
+}
